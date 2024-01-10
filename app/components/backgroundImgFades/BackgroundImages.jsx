@@ -42,7 +42,7 @@ const backgroundImages = () => {
                 alt='Background-Img'
             />
             <div className={styles.quote}>
-                <h3>"Streamlining essentials, one click at a time –<h1> UtilityXpress,</h1> your shortcut to seamless living."</h3>
+                <h3>Streamlining essentials, one click at a time –<h1> UtilityXpress,</h1> your shortcut to seamless living.</h3>
             </div>
         </div>
     </div>

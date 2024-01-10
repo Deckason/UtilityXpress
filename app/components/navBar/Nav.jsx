@@ -35,7 +35,7 @@ const Nav = () => {
       </div>
       <div className={`${styles.lowerNav} ${ubuntu.className}`}>
         <div className={styles.logoContainer}>
-            <Link href={"/"}>Logo</Link>
+            <Link href={"/"}>UtilityXpress</Link>
         </div>
 
         {/* ----------------------- SMALL SCREEN BURGER MENU TOGGLE ------------------ */}
