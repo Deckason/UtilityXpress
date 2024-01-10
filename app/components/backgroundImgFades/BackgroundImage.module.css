@@ -5,14 +5,13 @@
 .page_bg_Container{
     width: 100%;
     height: 70vh;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .page_bg_Container img{
-    filter: brightness(15%);
+    filter: brightness(35%);
     object-fit: cover;
 }
 
