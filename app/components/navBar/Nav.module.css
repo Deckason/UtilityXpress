@@ -70,6 +70,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5px 0;
+    gap: .2rem;
 }
 
 .imgContainer{
@@ -81,15 +83,7 @@
 }
 
 
-/* --------------------------------------------------- TABLET SCREEN -------------------------------- */
-
-@media screen and (max-width: 768px) {
-
-}
-
-
-
-
+/* --------------------------------------------------- MOBILE SCREEN -------------------------------- */
 @media screen and (max-width: 600px) {
     .topNav{
         flex-direction: column;
@@ -97,8 +91,9 @@
     }
 
     .lowerNav{
-        padding: 1rem 2rem;
+        padding: 1rem;
         position: relative;
+        z-index: 2;
     }
     
     .openMenu, .closeMenu{
@@ -108,8 +103,8 @@
 
     .closeMenu{
         position: absolute;
-        top: 10;
         right: .5rem;
+        top: 0;
         color: var(--orange);
         z-index: 2;
     }
@@ -123,7 +118,7 @@
     .linksContainer{
         background: var(--primary-blue);
         padding: 5px 0;
-        width: 8rem;
+        width: 10rem;
         position: absolute;
         top: 0;
         right: 0;
