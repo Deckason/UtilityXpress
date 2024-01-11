@@ -1,6 +1,7 @@
 import { Inter, Roboto, Poppins } from 'next/font/google'
 import './globals.css'
 import Nav from './components/navBar/Nav'
+import Footer from './components/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   )

@@ -12,8 +12,8 @@ const backgroundImages = () => {
             <Image
                 src={bg}
                 // src={images[imgIndex]}
-                width={700}
-                height={500}
+                width={1500}
+                height={1000}
                 alt='Background-Img'
             />
             <div className={styles.quote}>
