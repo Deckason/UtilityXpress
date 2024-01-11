@@ -1,9 +1,11 @@
 import React from 'react'
+import styles from "./page.module.css"
+import LandingPage from './components/landingPage/LandingPage'
 
 const page = () => {
   return (
-    <div>
-      <h1>UtilityXpress</h1>
+    <div className={styles.container}>
+      <LandingPage />
     </div>
   )
 }

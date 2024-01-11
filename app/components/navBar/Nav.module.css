@@ -1,0 +1,152 @@
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topNav{
+    width: 100%;
+    padding: 1rem 10%;
+    background: var(--primary-blue);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topSocialsContainer{
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.topSocialsContainer a{
+    color: var(--white);
+}
+
+.topLoginRegisterContainer{
+    display: flex;
+    gap: 2rem;
+}
+
+.topLoginRegisterContainer a{
+    color: var(--white);
+}
+
+.lowerNav{
+    width: 100%;
+    padding: 5px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+}
+
+.openMenu, .closeMenu{
+    display: none;
+}
+
+.linksContainer, .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linksContainer{
+    gap: 3rem;
+}
+
+.links{
+    gap: 1.5rem;
+}
+
+.links a{
+    color: var(--light-blue);
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    gap: .2rem;
+}
+
+.imgContainer{
+    height: 2rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 2px solid var(--primary-blue)
+}
+
+
+/* --------------------------------------------------- MOBILE SCREEN -------------------------------- */
+@media screen and (max-width: 600px) {
+    .topNav{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .lowerNav{
+        padding: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .openMenu, .closeMenu{
+        font-size: larger;
+        display: block;
+    }
+
+    .closeMenu{
+        position: absolute;
+        right: .5rem;
+        top: 0;
+        color: var(--orange);
+        z-index: 2;
+    }
+
+
+    .linksContainer, .links{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .linksContainer{
+        background: var(--primary-blue);
+        padding: 5px 0;
+        width: 10rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        display: none;
+    }
+
+    .linksContainer.menuVisible{
+        display: flex;
+    }
+
+    .links{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .links a{
+        color: var(--white);
+        width: 100%;
+        padding: 1rem .4rem;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .navBurger{
+        align-self: flex-end;
+    }
+
+    .profile small{
+        color: var(--orange);
+    }
+}
