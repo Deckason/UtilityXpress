@@ -7,6 +7,7 @@
     --black: #000;
     --footer-bg: #0e0d0d;
     --text-on-black-bg: #ccc;
+    --card-shadow: 0.1px 0.1px 5px 0.1px rgba(0, 0, 0, 0.2);
 
 }
 
