@@ -12,6 +12,7 @@
 }
 .sectionHeader h1{
     padding-left: 2rem;
+    color: var(--primary-blue);
     width: 35%;
     letter-spacing: .5rem;
     border-bottom: .3rem solid var(--orange);
