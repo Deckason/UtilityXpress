@@ -40,6 +40,10 @@
     flex-grow: 1;
 }
 
+.products a, .links a, .contacts a{
+    padding-left: 1rem;
+}
+
 .contacts a{
     display: flex;
     align-items: center;
@@ -53,6 +57,8 @@
     padding: .2rem;
     text-align: center;
     font-size: 12px;
+    border-top: 1px solid var(--text-on-black-bg);
+    margin-top: 2rem;
 }
 
 /* --------------------------------- MOBILE VIEW ----------------------------------- */
@@ -60,7 +66,6 @@
 @media screen and (max-width: 600px) {
     .products, .links, .contacts{
         min-width: 100%;
-        align-items: center;
     }
     
 }
