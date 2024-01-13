@@ -12,9 +12,10 @@ const InternetData = () => {
                 />
             </div>
             <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>Internet Datap</h3>
+                <h3 className={styles.cardTitle}>Internet Data</h3>
                 <p className={styles.cardBody}>
-                Subscribe seamlessly to our cheap, high-speed internet plans. Fast, reliable connectivity is just a click away.
+                Subscribe seamlessly to our cheap, high-speed internet plans. 
+                Fast, reliable connectivity is just a click away.
                 </p>
             </div>
         </div>

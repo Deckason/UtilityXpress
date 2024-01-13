@@ -40,6 +40,7 @@
     align-items: center;
     background: var(--white);
     gap: 1rem;
+    box-shadow: var(--card-shadow);
 }
 
 .cardIcon{
@@ -88,6 +89,10 @@
         width: 60%;
     }
 
+    .sectionHeader span{
+        font-size: xx-large;
+    }
+
     .cardIcon{
         padding: 1.3rem;
     }
@@ -104,6 +109,9 @@
 @media screen and (max-width: 600px) {
     .sectionHeader h1{
         width: 70%;
+    }
+    .sectionHeader span{
+        font-size: xx-large;
     }
     .cardIcon{
         padding: 1.1rem;
@@ -129,6 +137,10 @@
         width: 90%;
     }
 
+    .sectionHeader span{
+        font-size: larger;
+    }
+
     .cardIcon{
         padding: 1rem;
     }
@@ -139,5 +151,15 @@
 
     .cardBody{
         font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .sectionHeader h1{
+        width: 100%;
+        font-size: small;
+    }
+    .sectionHeader span{
+        font-size: larger;
     }
 }

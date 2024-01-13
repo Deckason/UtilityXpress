@@ -1,0 +1,113 @@
+.container{
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.sectionHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.sectionHeader h1{
+    padding-left: 2rem;
+    width: 50%;
+    letter-spacing: .5rem;
+    border-bottom: .3rem solid var(--orange);
+}
+.sectionHeader span{
+    color: var(--orange);
+    font-weight: bolder;
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.sectionContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    row-gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+    flex-grow: 1;
+    box-shadow: var(--card-shadow)
+}
+
+.icon{
+    font-size: 3rem;
+    color: var(--orange);
+}
+
+.card h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card p{
+    font-size: small;
+    text-align: center;
+    color: #9c9c9c;
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .sectionHeader{
+        margin-bottom: 1rem;
+    }
+    .sectionHeader h1{
+        padding-left: 3rem;
+        width: 60%;
+        font-size: large;
+        letter-spacing: .3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sectionHeader h1{
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sectionHeader h1{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sectionHeader h1{
+        width: 90%;
+    }
+    .sectionHeader span{
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sectionHeader h1{
+        width: 95%;
+        font-size: small;
+    }
+}
+@media screen and (max-width: 300px) {
+    .sectionHeader h1{
+        width: 100%;
+        font-size: small;
+    }
+    .sectionHeader span{
+        font-size: larger;
+    }
+}
