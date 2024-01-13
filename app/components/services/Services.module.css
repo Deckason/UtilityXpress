@@ -1,0 +1,143 @@
+.container{
+    width: 100%;
+    padding: 2rem 0;
+    background: var(--gray);
+}
+
+.sectionHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.sectionHeader h1{
+    padding-left: 2rem;
+    width: 35%;
+    letter-spacing: .5rem;
+    border-bottom: .3rem solid var(--orange);
+}
+.sectionHeader span{
+    color: var(--orange);
+    font-weight: bolder;
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.sectionContent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sectionCard{
+    width: 350px;
+    padding: 1rem;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background: var(--white);
+    gap: 1rem;
+}
+
+.cardIcon{
+    padding: 1.5rem;
+    background: var(--gray);
+    border-radius: 50%;
+}
+
+.ServicesIcon{
+    font-size: 2.5rem;
+    color: var(--text-on-black-bg);
+}
+
+.sectionCard:hover > .cardIcon{
+    background: linear-gradient(to right, var(--orange),#ffcf77 );
+}
+
+.sectionCard:hover > .cardIcon .ServicesIcon{
+    color: white;
+}
+
+.cardTitle{
+    color: var(--orange);
+    padding-bottom: .5rem;
+}
+
+.cardBody{
+    font-size: small;
+    color: gray;
+}
+
+@media screen and (max-width: 1024px) {
+    .sectionHeader{
+        margin-bottom: 1rem;
+    }
+    .sectionHeader h1{
+        padding-left: 3rem;
+        width: 40%;
+        font-size: large;
+        letter-spacing: .3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sectionHeader h1{
+        width: 60%;
+    }
+
+    .cardIcon{
+        padding: 1.3rem;
+    }
+
+    .ServicesIcon{
+        font-size: 2rem;
+    }
+
+    .cardBody{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sectionHeader h1{
+        width: 70%;
+    }
+    .cardIcon{
+        padding: 1.1rem;
+    }
+
+    .ServicesIcon{
+        font-size: 1.8rem;
+    }
+
+    .cardBody{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sectionHeader h1{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sectionHeader h1{
+        width: 90%;
+    }
+
+    .cardIcon{
+        padding: 1rem;
+    }
+
+    .ServicesIcon{
+        font-size: 1.5rem;
+    }
+
+    .cardBody{
+        font-size: 10px;
+    }
+}
