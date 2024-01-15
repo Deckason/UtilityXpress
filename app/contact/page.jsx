@@ -1,4 +1,6 @@
 import React from 'react'
+import Nav from '../components/navBar/Nav'
+import Footer from '../components/footer/Footer'
 
 const page = () => {
   return (
