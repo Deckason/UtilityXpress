@@ -11,7 +11,6 @@ const backgroundImages = () => {
       <div className={styles.page_bg_Container}>
             <Image
                 src={bg}
-                // src={images[imgIndex]}
                 width={1500}
                 height={1000}
                 alt='Background-Img'
