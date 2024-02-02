@@ -1,0 +1,92 @@
+.welcomeText h1{
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    color: var(--light-blue);
+    gap: .5rem;
+}
+
+.smileIcon{
+    color: var(--orange);
+}
+
+.welcomeText p{
+    font-family: cursive;
+    font-style: italic;
+    color: grey;
+}
+
+.userProfile{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notificationIconContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notificationIcon{
+    font-size: 2rem;
+    color: var(--light-blue);
+}
+.notificationIconIndicator{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
+
+.openMenu{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .openMenu{
+        display: block;
+        color: var(--light-blue);
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .welcomeText{
+        font-size: small;
+    }
+
+    .userProfile{
+        gap: 1rem;
+    }
+
+    .notificationIcon{
+        font-size: xx-large;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .welcomeText{
+        font-size: xx-small;
+    }
+
+    .userProfile{
+        gap: .5rem;
+    }
+
+    .notificationIcon{
+        font-size: x-large;
+    }
+
+    .notificationIconIndicator{
+        width: 5px;
+        height: 5px;
+    }
+}

@@ -1,55 +1,72 @@
 .container{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 0 3rem; */
 }
 
-.sectionHeader{
-    padding: 1rem;
-    width: 100%;
+.asideContainer{
+    position: fixed;
+    width: 25%;
+    height: 100dvh;
+    display: flex;
+    justify-content: flex-end;
+    background: var(--gray);
+}
+
+.mainContainer{
+    margin-left: 25%;
+    width: calc(100% - 25%);
+    padding: 0 2rem;
+}
+
+.profileDetails{
     display: flex;
     justify-content: space-between;
-    color: var(--primary-blue);
-    /* border: 1px solid red; */
-}
-
-.profile{
-    /* border: 1px solid red; */
-    display: flex;
     align-items: center;
-    gap: 1rem
+    padding: .5rem 1rem;
 }
 
-.imgContainer{
-    height: 3rem;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    overflow: hidden;
-    /* border: 2px solid var(--primary-blue) */
+.closeMenu{
+    display: none;
 }
 
-.imgContainer img{
-    object-fit: cover;
+@media screen and (max-width: 768px) {
+    .mainContainer{
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .asideContainer{
+        z-index: 2;
+        left: -100%;
+        position: absolute;
+        flex-direction: column;
+        transition: 1s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .profileDetails{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menuVisible{
+        width: 80%;
+        left: 0%;
+        position: fixed;
+    }
+
+    .closeMenu{
+        color: var(--primary-blue);
+        font-size: 3rem;
+        align-self: flex-end;
+        padding: .5rem;
+        display: flex;
+    }
+
 }
 
-
-.notification{
-    /* border: 1px solid red; */
-    display: flex;
-    gap: 5rem
-}
-
-.icon{
-    font-size: 3rem;
-}
-
-.accountStatus{
-    background: var(--primary-blue);
-    width: 100%;
-    min-height: 30vh;
-    padding: 5rem;
-    border-bottom-right-radius: 3rem;
-    border-bottom-left-radius: 3rem;
+@media screen and (max-width: 400px) {
+    .profileDetails{
+        padding: .5rem .5rem;
+    }
 }

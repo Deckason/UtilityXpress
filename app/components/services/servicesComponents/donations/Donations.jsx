@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from"../../Services.module.css"
-import { BiSolidDonateHeart } from "react-icons/bi";
+import { BiSolidDonateHeart } from 'react-icons/bi'
 
 const Donations = () => {
   return (
     <>
         <div className={styles.sectionCard}>
             <div className={styles.cardIcon}>
-                <BiSolidDonateHeart 
+                <BiSolidDonateHeart
                     className={styles.ServicesIcon}
                 />
             </div>

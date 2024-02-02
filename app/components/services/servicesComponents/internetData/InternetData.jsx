@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from"../../Services.module.css"
-import { IoMdWifi } from "react-icons/io";
+import { IoMdWifi } from 'react-icons/io'
 
 const InternetData = () => {
   return (
     <>
         <div className={styles.sectionCard}>
             <div className={styles.cardIcon}>
-                <IoMdWifi 
+                <IoMdWifi
                     className={styles.ServicesIcon}
                 />
             </div>

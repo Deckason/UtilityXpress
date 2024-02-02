@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { FiPhoneCall } from 'react-icons/fi';
 import { GoMail } from 'react-icons/go';
 
-const currentYear = new Date().getFullYear();
 
 const Footer = () => {
+  
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>

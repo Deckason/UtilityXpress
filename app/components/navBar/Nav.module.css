@@ -28,6 +28,7 @@
 .topLoginRegisterContainer{
     display: flex;
     gap: 2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .topLoginRegisterContainer a{
@@ -65,29 +66,8 @@
     color: var(--light-blue);
 }
 
-.profile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    gap: .2rem;
-}
-
-.imgContainer{
-    height: 2rem;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    overflow: hidden;
-}
-
-.imgContainer img{
-    object-fit: cover;
-}
-
-
 /* --------------------------------------------------- MOBILE SCREEN -------------------------------- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .topNav{
         flex-direction: column;
         gap: 1rem;
@@ -124,18 +104,19 @@
         width: 10rem;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -10rem;
         z-index: 1;
-        display: none;
+        transition: 1s cubic-bezier(0.77, 0, 0.175, 1);
     }
-
+    
     .linksContainer.menuVisible{
-        display: flex;
+        right: 0;
     }
 
     .links{
         width: 100%;
         margin-top: 1rem;
+        text-align: center;
     }
 
     .links a{
@@ -147,9 +128,5 @@
 
     .navBurger{
         align-self: flex-end;
-    }
-
-    .profile small{
-        color: var(--orange);
     }
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from"../../Services.module.css"
-import { MdMobileFriendly } from "react-icons/md";
+import { MdMobileFriendly } from 'react-icons/md'
 
 const MobileTopUp = () => {
   return (<>
             <div className={styles.sectionCard}>
                 <div className={styles.cardIcon}>
-                    <MdMobileFriendly 
+                    <MdMobileFriendly
                         className={styles.ServicesIcon}
                     />
                 </div>

@@ -27,4 +27,5 @@ img{
 }
 body{
     width: 100%;
+    background: var(--white);
 }
