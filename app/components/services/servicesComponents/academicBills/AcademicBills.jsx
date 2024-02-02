@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from"../../Services.module.css"
-import { LiaSchoolSolid } from "react-icons/lia";
+import { LiaSchoolSolid } from 'react-icons/lia'
 
 const AcademicBills = () => {
   return (

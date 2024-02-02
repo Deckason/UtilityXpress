@@ -1,20 +1,20 @@
 "use client"
 import React, { useState } from 'react'
-import { New_Tegomin, Ubuntu, } from 'next/font/google'
+// import { New_Tegomin, Ubuntu, } from 'next/font/google'
 import styles from "./Nav.module.css"
-import { FaWhatsapp, } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
-import { GoMail } from "react-icons/go";
-import { SlSocialFacebook } from "react-icons/sl";
-import { MdMenu } from "react-icons/md";
-import { IoMdClose } from "react-icons/io";
-import profile_pic from "../../../public/assets/images/profile_pic.jpg"
 import Link from 'next/link';
-import Image from 'next/image';
+import { SlSocialFacebook } from 'react-icons/sl';
+import { FaWhatsapp } from 'react-icons/fa6';
+import { GoMail } from 'react-icons/go';
+import { FiPhoneCall } from 'react-icons/fi';
+import { MdMenu } from 'react-icons/md';
+import { IoMdClose } from 'react-icons/io';
+import Profile from '../profile/Profile';
 
-const ubuntu = Ubuntu({ weight: ["300"], subsets: ['latin'], })
 
-const new_Tegomin = New_Tegomin({ weight: ["400"], style: ["normal"], subsets: ['latin'], })
+// const ubuntu = Ubuntu({ weight: ["300"], subsets: ['latin'], })
+
+// const new_Tegomin = New_Tegomin({ weight: ["400"], style: ["normal"], subsets: ['latin'], })
 
 const Nav = () => {
     const [menuVisible, setmenuVisible] = useState(false)
@@ -27,13 +27,13 @@ const Nav = () => {
             <Link href={"/"}><GoMail size={20} color={"#fff"}/></Link>
             <Link href={"/"}><FiPhoneCall size={20} color={"#fff"}/></Link>
         </div>
-        <div className={`${styles.topLoginRegisterContainer} ${new_Tegomin.className}`}>
+        <div className={styles.topLoginRegisterContainer}>
             <Link href={"/"}>Login</Link>
             <Link href={"/"}>Register</Link>
             {/* <Link href={"/"} style={{color: "orange"}}>Logout</Link> */}
         </div>
       </div>
-      <div className={`${styles.lowerNav} ${ubuntu.className}`}>
+      <div className={styles.lowerNav}>
         <div className={styles.logoContainer}>
             <Link href={"/"}>UtilityXpress</Link>
         </div>
@@ -51,17 +51,7 @@ const Nav = () => {
                 <Link href={"/about"}>About</Link>
                 <Link href={"/contact"}>Contact</Link>
             </div>
-            <div className={styles.profile}>
-                <Link href={"/profile"} className={styles.imgContainer}>
-                    <Image
-                        src={profile_pic}
-                        width={100}
-                        height={100}
-                        alt='profile-pic'
-                    />
-                </Link>
-                <small>Username</small>
-            </div>
+            <Profile />
         </div>
       </div>
     </nav>

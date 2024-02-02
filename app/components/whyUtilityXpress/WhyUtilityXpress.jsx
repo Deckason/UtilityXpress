@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from "./whyUtilityXpress.module.css"
-import { LiaSchoolSolid } from "react-icons/lia";
-import { BsFillShieldLockFill } from "react-icons/bs";
-import { RiGlobalFill } from "react-icons/ri";
-import { GiReceiveMoney } from "react-icons/gi";
-import { MdSupportAgent } from "react-icons/md";
-import { PiArrowsClockwiseBold } from "react-icons/pi";
+import { BsFillShieldLockFill } from 'react-icons/bs';
+import { RiGlobalFill } from 'react-icons/ri';
+import { GiReceiveMoney } from 'react-icons/gi';
+import { MdSupportAgent } from 'react-icons/md';
+import { PiArrowsClockwiseBold } from 'react-icons/pi';
 
 
 const whyUtilityXpress = () => {

@@ -3,11 +3,11 @@ import './globals.css'
 import Nav from './components/navBar/Nav'
 import Footer from './components/footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-})
+// const inter = Inter({ subsets: ['latin'] })
+// const roboto = Roboto({
+//   weight: '400',
+//   subsets: ['latin'],
+// })
 const poppins = Poppins({
   weight: ["100","200", "300", '400', "500", "600", "700", "800","900"],
   style: ["italic", "normal"],
@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Nav />
+        {/* <Nav /> */}
         <div style={{minHeight: "80vh"}}>
           {children}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )

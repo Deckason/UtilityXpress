@@ -1,0 +1,30 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    gap: .2rem;
+}
+
+.imgContainer{
+    height: 2rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.imgContainer img{
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .profile small{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .imgContainer{
+        height: 1.5rem;
+    }
+}

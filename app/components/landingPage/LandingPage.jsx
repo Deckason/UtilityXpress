@@ -12,9 +12,11 @@ import Footer from '../footer/Footer';
 const LandingPage = () => {
   return (
     <div className={styles.container}>
+      <Nav />
         <BackgroundImages />
         <Services />
         <WhyUtilityXpress />
+      <Footer />
     </div>
     )
 }

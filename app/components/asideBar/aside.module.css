@@ -1,0 +1,124 @@
+.aside{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.logoContainer, .logOutContainer{
+    width: 100%;
+}
+
+.logoContainer{
+    text-align: center;
+    color: var(--light-blue);
+    padding: .5rem .1rem;
+    letter-spacing: .3rem;
+}
+
+.navContainer{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 1.2rem;
+}
+
+.navContainer a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 0;
+    padding-left: 1.5rem;
+    padding-right: .5rem;
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+    color: var(--light-blue);
+}
+
+.navContainer a:hover{
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.navContainer a:hover > .ServicesIcon{
+    color: var(--white);
+}
+
+.ServicesIcon{
+    font-size: 1.5rem;
+    color: var(--text-on-black-bg);
+}
+
+.logOutContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.logOutContainer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: red;
+}
+
+@media screen and (min-width: 1700px) {
+    .navContainer a{
+        font-size: xx-large;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        padding-left: 2.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .ServicesIcon{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .logoContainer h1{
+        font-size: large;
+    }
+
+    .navContainer a{
+        font-size: medium;
+        gap: 1.2rem;
+        padding: .5rem 0;
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+
+    .ServicesIcon{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .logoContainer{
+        padding: .5rem .1rem;
+        letter-spacing: .3rem;
+    }
+    
+    .navContainer a{
+        gap: 1rem;
+        padding-left: 1.5rem;
+        font-size: small;
+    }
+    
+    .ServicesIcon{
+        font-size: 1.2rem;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logoContainer{
+        display: none;
+    }
+}

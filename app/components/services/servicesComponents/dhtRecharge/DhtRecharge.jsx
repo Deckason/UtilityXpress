@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from"../../Services.module.css"
-import { FaSatelliteDish } from "react-icons/fa";
+import { FaSatelliteDish } from 'react-icons/fa6'
 
 const DhtRecharge = () => {
   return (
     <>
         <div className={styles.sectionCard}>
             <div className={styles.cardIcon}>
-                <FaSatelliteDish 
+                <FaSatelliteDish
                     className={styles.ServicesIcon}
                 />
             </div>
