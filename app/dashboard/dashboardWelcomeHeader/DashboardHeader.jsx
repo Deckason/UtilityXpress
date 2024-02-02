@@ -2,10 +2,10 @@
 import React from 'react'
 import styles from "./DashboardHeader.module.css"
 import { MdMenu } from 'react-icons/md'
-import { FaSmile } from 'react-icons/fa'
 import Profile from '@/app/components/profile/Profile'
 import { IoNotificationsOutline } from 'react-icons/io5'
 import { userStore } from './../../store/userStore';
+import { PiHandWavingLight } from 'react-icons/pi'
 
 const Header = () => {
   const {updateMenuVisible, menuVisible} = userStore()
@@ -16,7 +16,7 @@ const Header = () => {
         <MdMenu onClick={()=>updateMenuVisible(!menuVisible)}/>
         </div>
         <div className={styles.welcomeText}>
-        <h1>Hello Michael <FaSmile className={styles.smileIcon}/></h1>
+        <h1>Hello Michael <PiHandWavingLight className={styles.handWave}/></h1>
         <p>What transaction are you doing today?</p>
         </div>
         <div className={styles.userProfile}>
