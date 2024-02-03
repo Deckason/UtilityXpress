@@ -16,6 +16,7 @@
     margin-left: 25%;
     width: calc(100% - 25%);
     padding: 0 2rem;
+    min-height: 100dvh;
 }
 
 .profileDetails{
@@ -47,6 +48,7 @@
     .profileDetails{
         width: 100%;
         justify-content: space-between;
+        gap: 1rem;
     }
 
     .menuVisible{

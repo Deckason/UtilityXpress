@@ -16,7 +16,7 @@ const Header = () => {
         <MdMenu onClick={()=>updateMenuVisible(!menuVisible)}/>
         </div>
         <div className={styles.welcomeText}>
-        <h1>Hello Michael <PiHandWavingLight className={styles.handWave}/></h1>
+        <h1>Hi, Michael <PiHandWavingLight className={styles.handWave}/></h1>
         <p>What transaction are you doing today?</p>
         </div>
         <div className={styles.userProfile}>

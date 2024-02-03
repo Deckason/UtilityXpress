@@ -10,12 +10,12 @@ const page = () => {
   const {updateMenuVisible, menuVisible} = userStore()
 
   return (
-    <div className={styles.container} onClick={()=>menuVisible && updateMenuVisible(false)}>
+    <div className={styles.container} >
       <div className={`${styles.asideContainer} ${menuVisible && styles.menuVisible}`}>
         <IoMdClose className={styles.closeMenu} onClick={()=>updateMenuVisible(!menuVisible)}/>
         <Aside />
       </div>
-      <div className={styles.mainContainer}>
+      <div className={styles.mainContainer} onClick={()=>menuVisible && updateMenuVisible(false)}>
         <div className={styles.profileDetails}>
           <DashboardHeader setmenuVisible={menuVisible}/>
         </div>
