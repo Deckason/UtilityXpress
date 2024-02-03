@@ -54,16 +54,16 @@
         color: var(--light-blue);
         font-size: x-large;
     }
+    
+    .welcomeText p{
+        font-size: large;
+        font-style: normal;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .welcomeText h1{
         font-size: xx-large;
-    }
-
-    .welcomeText p{
-        font-size: medium;
-        font-style: normal;
     }
 
     .userProfile{
