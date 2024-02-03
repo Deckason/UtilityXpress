@@ -56,7 +56,8 @@
     }
     
     .welcomeText p{
-        font-size: large;
+        font-family: monospace;
+        font-size: medium;
         font-style: normal;
     }
 }
