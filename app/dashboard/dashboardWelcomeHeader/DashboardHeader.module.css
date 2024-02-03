@@ -1,9 +1,8 @@
 .welcomeText h1{
-    font-family:'Courier New', Courier, monospace;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     align-items: center;
     color: var(--light-blue);
-    gap: .5rem;
 }
 
 .handWave{
@@ -58,8 +57,12 @@
 }
 
 @media screen and (max-width: 500px) {
-    .welcomeText{
-        font-size: small;
+    .welcomeText h1{
+        font-size: xx-large;
+    }
+
+    .welcomeText p{
+        font-size: medium;
     }
 
     .userProfile{
@@ -73,8 +76,12 @@
 }
 
 @media screen and (max-width: 400px) {
-    .welcomeText{
-        font-size: xx-small;
+    .welcomeText h1{
+        font-size: x-large;
+    }
+
+    .welcomeText p{
+        font-size: small;
     }
 
     .userProfile{
@@ -90,3 +97,9 @@
         height: 5px;
     }
 }
+
+    @media screen and (max-width: 290px) {
+        .handWave{
+            display: none;
+        }
+    }
