@@ -24,10 +24,23 @@
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
+    margin-bottom: 1rem;
 }
 
 .closeMenu{
     display: none;
+}
+
+.content{
+    width: 100%;
+}
+
+.balances{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,6 +76,10 @@
         align-self: flex-end;
         padding: .5rem;
         display: flex;
+    }
+
+    .balances{
+        flex-direction: column;
     }
 
 }
