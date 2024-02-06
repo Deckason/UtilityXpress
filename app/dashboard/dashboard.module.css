@@ -43,10 +43,13 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0 1rem;
 }
 
 @media screen and (max-width: 768px) {
+    .container{
+        padding: 0 1rem;
+    }
+    
     .mainContainer{
         margin-left: 0;
         width: 100%;
