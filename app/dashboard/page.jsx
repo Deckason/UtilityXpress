@@ -7,6 +7,7 @@ import { IoMdClose } from 'react-icons/io'
 import { userStore } from '../store/userStore'
 import WalletBalance from '../components/balanceCard/walletBalance/WalletBalance'
 import ReferalBalance from '../components/balanceCard/referalBalance/ReferalBalance'
+import BillServices from '../components/billServices/BillServices'
 
 const page = () => {
   const {updateMenuVisible, menuVisible} = userStore()
@@ -23,8 +24,11 @@ const page = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.balances}>
-          <WalletBalance />
-          <ReferalBalance />
+            <WalletBalance />
+            <ReferalBalance />
+          </div>
+          <div className={styles.billsServices}>
+            <BillServices />
           </div>
         </div>
       </div>

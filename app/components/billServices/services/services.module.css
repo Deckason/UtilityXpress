@@ -1,0 +1,39 @@
+.serviceContainer{
+    width: 20%;
+    min-width: 100px;
+    max-width: 250px;
+    height: 100px;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1rem;
+    color: var(--light-blue);
+    box-shadow: var(--card-shadow);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .5rem;
+}
+
+.serviceContainer:hover{
+    box-shadow: 0.1px 0.1px 5px 0.1px rgba(25, 71, 147, .5);
+}
+
+.ServiceIcon{
+    font-size: xx-large;
+    padding: .3rem;
+    border-radius: 50%;
+    background: var(--very-light-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .ServiceIcon{
+        font-size: x-large;
+    }
+
+    .serviceContainer p{
+        font-size: medium;
+    }
+}
