@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--very-light-blue)
+}
+
+.servicesHeader{
+    color: var(--primary-blue);
+}
+
+.servicesContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
