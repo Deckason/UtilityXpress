@@ -1,0 +1,89 @@
+.container{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.header h3{
+    color: var(--primary-blue);
+}
+
+.selectDropDown{
+    border: 1px solid var(--text-on-black-bg);
+    color: grey;
+    padding: .3rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableHead{
+    background: var(--text-on-black-bg);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.tableHead th{
+    font-weight: 500;
+}
+
+.tableBody tr:nth-child(even){
+    background: var(--gray);
+}
+
+.expandable{
+    display: none;
+}
+
+.tableBody td{
+    border-bottom: 1px solid var(--gray);
+    padding: 0 .5rem;
+    text-align: center;
+}
+
+.amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .table{
+        width: 100%;
+        font-size: large;
+        overflow-x: hidden;   
+    }
+
+    .tableBody tr{
+        position: relative;
+
+    }
+
+    .expandable{
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 30px;
+        right: 0;
+        background: var(--white);
+        box-shadow: 0.1px -0.1px 5px 0.1px rgba(0, 0, 0, 0.2);
+        /* border: 1px solid red; */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .table{
+        font-size: small;
+    }
+}
