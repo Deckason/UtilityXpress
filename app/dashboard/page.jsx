@@ -8,6 +8,7 @@ import { userStore } from '../store/userStore'
 import WalletBalance from '../components/balanceCard/walletBalance/WalletBalance'
 import ReferalBalance from '../components/balanceCard/referalBalance/ReferalBalance'
 import BillServices from '../components/billServices/BillServices'
+import TransactionHistory from '../components/transactionHistory/TransactionHistory'
 
 const page = () => {
   const {updateMenuVisible, menuVisible} = userStore()
@@ -29,6 +30,9 @@ const page = () => {
           </div>
           <div className={styles.billsServices}>
             <BillServices />
+          </div>
+          <div className={styles.transactionHistroy}>
+            <TransactionHistory />
           </div>
         </div>
       </div>
