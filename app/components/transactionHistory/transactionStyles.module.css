@@ -22,50 +22,60 @@
 
 .table{
     width: 100%;
-    border-collapse: collapse;
 }
-
 .tableHead{
-    background: var(--text-on-black-bg);
+    width: 100%;
+    background: var(--light-blue);
+    color: var(--white);
     position: sticky;
     top: 0;
     z-index: 99;
+    padding: 1rem;
 }
 
-.tableHead th{
-    font-weight: 500;
+.row{
+    width: 100%;
+    display: flex;
 }
 
-.tableBody tr:nth-child(even){
-    background: var(--gray);
+.caption{
+    font-weight: 600;
+}
+
+.caption, .transactionDetail{
+    width: calc(100% / 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+
+.tableBody{
+    width: 100%;
+}
+
+.row:nth-child(even){
+    background: var(--very-light-blue);
+}
+
+.dataRow{
+    display: flex;
+    width: 100%;
 }
 
 .expandable{
     display: none;
 }
 
-.tableBody td{
-    border-bottom: 1px solid var(--gray);
-    padding: 0 .5rem;
-    text-align: center;
-}
-
-.amount{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @media screen and (max-width: 768px) {
     .table{
-        width: 100%;
         font-size: large;
         overflow-x: hidden;   
     }
-
-    .tableBody tr{
+    
+    
+    .bodyRow{
         position: relative;
-
     }
 
     .expandable{
@@ -76,14 +86,43 @@
         height: 100%;
         width: 30px;
         right: 0;
+        top: .5;
         background: var(--white);
         box-shadow: 0.1px -0.1px 5px 0.1px rgba(0, 0, 0, 0.2);
-        /* border: 1px solid red; */
+        cursor: pointer;
+    }
+
+    .dataColum{
+        width: calc(100% - 30px);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .dataColum .transactionDetail{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .dataColum .caption{
+        min-width: auto;
+        justify-content: flex-start;
+        margin-right: .5rem;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
+    .header h3{
+        font-size: medium;
+    }
     .table{
         font-size: small;
     }
+    .row .caption, .row .transactionDetail{
+        min-width: 100px;
+        font-size: small; 
+    }
+    
+    
 }
