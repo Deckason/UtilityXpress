@@ -1,0 +1,130 @@
+.container{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+}
+
+.formContainer{
+    width: 90%;
+    display: flex;
+    background: var(--white);
+}
+
+.illustration, .form{
+    width: calc(100% / 2)
+}
+
+.illustration img{
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.form h1{
+    color: var(--light-blue);
+    margin: 3rem 0;
+}
+
+.formInputs{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.inputContainer{
+    display: flex;
+    align-items:center;
+    padding: .5rem;
+    border-radius: 5px;
+    gap: .5rem;
+    color: gray;
+    border: 1px solid var(--gray);
+}
+
+.inputContainer span{
+    display: flex;
+    align-items:center;
+    height: 2.5rem;
+}
+
+.inputContainer input{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+}
+
+.inputContainer:focus-within{
+    border: 1px solid var(--very-light-blue);
+}
+
+.inputContainer input::placeholder{
+    color: #9b9999;
+}
+
+.passwordVisible{
+    cursor: pointer;
+}
+
+.buttonContainer button{
+    width: 100%;
+    padding: .5rem 0;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: var(--white);
+    background: var(--button-disabled);
+}
+
+.formInputs small{
+    text-align: center;
+    color: var(--button-disabled);
+}
+
+.formInputs small a{
+    color: var(--light-blue)
+}
+
+
+/*---------------------------------------------------- MOBILE VIEW------------------------------ */
+@media screen and (max-width: 768px) {
+    .illustration{
+        display: none;
+    }
+    
+    .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .formInputs{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .formContainer{
+        width: 95%;
+    }
+
+    .formInputs{
+        padding: 10px;
+    }
+}
