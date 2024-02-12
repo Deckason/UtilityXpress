@@ -41,7 +41,6 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 1rem;
     padding: 2rem;
 }
@@ -89,7 +88,8 @@
     cursor: pointer;
     border-radius: 20px;
     color: var(--white);
-    background: var(--button-disabled);
+    /* background: var(--button-disabled); */
+    background: var(--light-blue);
 }
 
 .formInputs small{
@@ -104,6 +104,11 @@
 
 /*---------------------------------------------------- MOBILE VIEW------------------------------ */
 @media screen and (max-width: 768px) {
+    .container{
+        justify-content: center;
+        align-items: flex-start;
+    }
+
     .illustration{
         display: none;
     }
@@ -116,6 +121,10 @@
 @media screen and (max-width: 500px) {
     .formInputs{
         width: 100%;
+    }
+
+    .buttonContainer button{
+        padding: 1rem;
     }
 }
 

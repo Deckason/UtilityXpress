@@ -42,7 +42,7 @@ const page = () => {
                             </span>}
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button>Login</button>
+                        <button disabled={true}>Login</button>
                     </div>
                     <small>Don't have an Account? <Link href={"/register"}>Register</Link></small>
                 </div>
