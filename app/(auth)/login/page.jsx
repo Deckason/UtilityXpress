@@ -10,6 +10,7 @@ import { BsEye, BsEyeSlash } from 'react-icons/bs'
 
 const page = () => {
   const [passwordVisible, setPasswordVissible] = useState(false)
+  const [disabled, setDisabled] = useState(true)
   return (
     <div className={styles.container}>
         <div className={styles.formContainer}>
@@ -27,7 +28,7 @@ const page = () => {
                 <div className={styles.formInputs}>
                     <div className={styles.inputContainer}>
                         <span className={styles.inputIcon}><BiUser /></span>
-                        <input type="text" placeholder='Enter Username/email'/>
+                        <input type="text" placeholder='Enter email'/>
                     </div>
                     <div className={styles.inputContainer}>
                         <span className={styles.inputIcon}><BiLock /></span>
@@ -42,7 +43,7 @@ const page = () => {
                             </span>}
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button disabled={true}>Login</button>
+                        <button disabled={disabled} className={`${disabled?styles.disabled : styles.notDisabled}`}>Register</button>
                     </div>
                     <small>Don't have an Account? <Link href={"/register"}>Register</Link></small>
                 </div>
