@@ -4,13 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--white);
+    background: linear-gradient(to bottom right, var(--primary-blue), var(--light-blue))
 }
 
 .formContainer{
     width: 90%;
     display: flex;
+    margin: 2rem 0;
     background: var(--white);
+    box-shadow: var(--card-shadow);
 }
 
 .illustration, .form{
@@ -22,14 +24,15 @@
     height: 100%;
 }
 
+.illustration{
+    background: #f8f8f8;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
-    border-radius: 10px;
-    box-shadow: var(--card-shadow);
 }
 
 .form h1{
@@ -45,10 +48,14 @@
     padding: 2rem;
 }
 
+.inputDiv label{
+    font-size: smaller;
+}
+
 .inputContainer{
     display: flex;
     align-items:center;
-    padding: .5rem;
+    padding: .1rem;
     border-radius: 5px;
     gap: .5rem;
     color: gray;
@@ -66,10 +73,11 @@
     height: 2.5rem;
     border: none;
     outline: none;
+    background: transparent;
 }
 
 .inputContainer:focus-within{
-    border: 1px solid var(--very-light-blue);
+    border: 1px solid var(--light-blue);
 }
 
 .inputContainer input::placeholder{
@@ -85,11 +93,18 @@
     padding: .5rem 0;
     text-align: center;
     border: none;
-    cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--white);
-    /* background: var(--button-disabled); */
+}
+
+.notDisabled{
     background: var(--light-blue);
+    cursor: pointer;
+}
+
+.disabled{
+    background: var(--button-disabled);
+    cursor: not-allowed;
 }
 
 .formInputs small{
