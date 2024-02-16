@@ -95,16 +95,7 @@
     border: none;
     border-radius: 10px;
     color: var(--white);
-}
-
-.notDisabled{
     background: var(--light-blue);
-    cursor: pointer;
-}
-
-.disabled{
-    background: var(--button-disabled);
-    cursor: not-allowed;
 }
 
 .formInputs small{
@@ -114,6 +105,10 @@
 
 .formInputs small a{
     color: var(--light-blue)
+}
+
+.err{
+    color: red !important;
 }
 
 
@@ -126,6 +121,10 @@
 
     .illustration{
         display: none;
+    }
+
+    .formContainer{
+        border-radius: 10px;
     }
     
     .form{
