@@ -14,9 +14,10 @@ const backgroundImages = () => {
                 width={1500}
                 height={1000}
                 alt='Background-Img'
+                priority
             />
             <div className={styles.quote}>
-                <h3>Streamlining essentials, one click at a time <h1>UtilityXpress,</h1> your shortcut to seamless living.</h3>
+                <h3>Streamlining essentials, one click at a time <p>UtilityXpress,</p> your shortcut to seamless living.</h3>
             </div>
         </div>
     </div>

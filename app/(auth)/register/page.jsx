@@ -6,11 +6,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BiEnvelope, BiLock, BiPhone, BiUser } from 'react-icons/bi'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
+import Loading from "../../components/loading/Loading"
 
 // Form Validation with Yup
+import signUpSchema from "../validationSchema/signUpSchema"
 import { useForm } from "react-hook-form"
-import * as yup from "yup"
 import { yupResolver } from '@hookform/resolvers/yup';
+import useSignUp from '@/app/hooks/useSignUp'
 
 
 
@@ -18,23 +20,17 @@ const page = () => {
     const [passwordVisible, setPasswordVissible] = useState(false)
     const [conpasswordVisible, setConPasswordVissible] = useState(false)
 
-    // Validation schema
-    const validatioSchema = yup.object().shape({
-        username: yup.string().required("Username is required!"),
-        email: yup.string().required("Email is required!").email("Email format is required!"),
-        phone: yup.number().required("Mobile number is required!").positive().min(11,"Expected 11 digits for mobile number!").integer().typeError('Number is required!'),
-        password: yup.string().required("Password is required!").min(8, "Min of 8 characters required!"),
-        confirmPassword: yup.string().required("Confirm password is required!").oneOf([yup.ref("password")], "Password do not match!"),
-    })
-
     const { register, handleSubmit, formState:{errors} } = useForm({
-        resolver: yupResolver(validatioSchema)
+        resolver: yupResolver(signUpSchema)
     })
 
-    const registerUser = (data)=>{
-        console.log(data)
+    const {isLoading, err, signup} = useSignUp()
+
+    const registerUser = async(data)=>{
+        const {username, email, phone, password, confirmPassword} = data
+        await signup(username, email, phone, password, confirmPassword)
     }
-    console.log("err", errors)
+
     return (
     <div className={styles.container}>
         <div className={styles.formContainer}>
@@ -48,6 +44,7 @@ const page = () => {
             </div>
             <form className={styles.form} onSubmit={handleSubmit(registerUser)}>
                 <h1>Register</h1>
+                <p className={`${styles.err} ${styles.serverErr}`}>{err && err}</p>
                 <div className={styles.formInputs}>
                     <div className={styles.inputSection}>
                         <div className={styles.inputContainer}>
@@ -101,7 +98,7 @@ const page = () => {
                         <small className={styles.err}>{errors.confirmPassword?.message}</small>
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button>Register</button>
+                        <button>{isLoading?<Loading />:"Register"}</button>
                     </div>
                     <small>Already have an Account? <Link href={"/login"}>Login</Link></small>
                 </div>

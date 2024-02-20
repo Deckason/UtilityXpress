@@ -1,0 +1,10 @@
+.customLoader {
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    border:4px solid;
+    border-color:#766DF4;
+    border-right-color: var(--white);
+    animation:s2 1s infinite linear;
+  }
+  @keyframes s2 {to{transform: rotate(1turn)}}
