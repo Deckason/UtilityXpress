@@ -68,7 +68,7 @@ const loginUser = async(data)=>{
                         <small className={styles.err}>{errors.password?.message}</small>
                     </div>
                     <div className={styles.buttonContainer}>
-                    <button>{isLoading?<Loading />:"Login"}</button>
+                    <button disabled={isLoading}>{isLoading?<Loading />:"Login"}</button>
                     </div>
                     <small>Don't have an Account? <Link href={"/register"}>Register</Link></small>
                 </div>
