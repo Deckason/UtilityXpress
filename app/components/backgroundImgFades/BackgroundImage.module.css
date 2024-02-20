@@ -23,7 +23,7 @@
     width: 90%;
 }
 
-.quote h1{
+.quote p{
     font-size:xx-large;
     font-family:'Courier New', Courier, monospace;
     color: var(--orange);
@@ -36,7 +36,7 @@
 
 
 @media screen and (max-width: 600px) {
-    .quote h1{
+    .quote p{
         font-size:larger;
     }
     

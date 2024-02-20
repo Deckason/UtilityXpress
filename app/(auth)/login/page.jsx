@@ -6,30 +6,29 @@ import svgIllustrator from "../../../public/assets/svgs/login-illustration.svg"
 import Link from 'next/link'
 import { BiLock, BiUser } from 'react-icons/bi'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
+import Loading from "../../components/loading/Loading"
 
 // Form Validation with Yup
+import loginSchema from "../validationSchema/loginSchema"
 import { useForm } from "react-hook-form"
-import * as yup from "yup"
 import { yupResolver } from '@hookform/resolvers/yup';
+import useLogin from '@/app/hooks/useLogin'
 
 
 const page = () => {
   const [passwordVisible, setPasswordVissible] = useState(false)
+  
+    const { register, handleSubmit, formState:{errors} } = useForm({
+        resolver: yupResolver(loginSchema)
+    })
 
-  // Validation schema
-  const validatioSchema = yup.object().shape({
-    email: yup.string().required("Email is required!").email("Email format is required!"),
-    password: yup.string().required("Password is required!").min(8, "Min of 8 characters required!"),
-})
+    const {login, isLoading, err} = useLogin()
 
-const { register, handleSubmit, formState:{errors} } = useForm({
-    resolver: yupResolver(validatioSchema)
-})
-
-const loginUser = (data)=>{
-    console.log(data)
+const loginUser = async(data)=>{
+    const {email, password} = data
+    await login(email, password)
 }
-console.log("err", errors)
+
 
   return (
     <div className={styles.container}>
@@ -44,6 +43,7 @@ console.log("err", errors)
             </div>
             <form className={styles.form} onSubmit={handleSubmit(loginUser)}>
                 <h1>Login</h1>
+                <p className={`${styles.err} ${styles.serverErr}`}>{err && err}</p>
                 <div className={styles.formInputs}>
                     <div className={styles.inputSection}>
                         <div className={styles.inputContainer}>
@@ -68,7 +68,7 @@ console.log("err", errors)
                         <small className={styles.err}>{errors.password?.message}</small>
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button>Login</button>
+                    <button>{isLoading?<Loading />:"Login"}</button>
                     </div>
                     <small>Don't have an Account? <Link href={"/register"}>Register</Link></small>
                 </div>

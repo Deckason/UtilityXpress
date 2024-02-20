@@ -59,7 +59,7 @@
     border-radius: 5px;
     gap: .5rem;
     color: gray;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--very-light-blue)
 }
 
 .inputContainer span{
@@ -73,7 +73,6 @@
     height: 2.5rem;
     border: none;
     outline: none;
-    background: transparent;
 }
 
 .inputContainer:focus-within{
@@ -81,7 +80,7 @@
 }
 
 .inputContainer input::placeholder{
-    color: #9b9999;
+    color: gray;
 }
 
 .passwordVisible{
@@ -90,8 +89,11 @@
 
 .buttonContainer button{
     width: 100%;
-    padding: .5rem 0;
-    text-align: center;
+    height: 40px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 10px;
     color: var(--white);
@@ -109,6 +111,10 @@
 
 .err{
     color: red !important;
+}
+.serverErr{
+    text-align: center;
+    padding: 0 1rem;
 }
 
 
@@ -137,9 +143,9 @@
         width: 100%;
     }
 
-    .buttonContainer button{
+    /* .buttonContainer button{
         padding: 1rem;
-    }
+    } */
 }
 
 @media screen and (max-width: 350px) {

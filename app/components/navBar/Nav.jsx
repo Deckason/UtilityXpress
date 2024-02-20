@@ -28,8 +28,8 @@ const Nav = () => {
             <Link href={"/"}><FiPhoneCall size={20} color={"#fff"}/></Link>
         </div>
         <div className={styles.topLoginRegisterContainer}>
-            <Link href={"/"}>Login</Link>
-            <Link href={"/"}>Register</Link>
+            <Link href={"/login"}>Login</Link>
+            <Link href={"/register"}>Register</Link>
             {/* <Link href={"/"} style={{color: "orange"}}>Logout</Link> */}
         </div>
       </div>
@@ -50,6 +50,7 @@ const Nav = () => {
                 <Link href={"/"}>Home</Link>
                 <Link href={"/about"}>About</Link>
                 <Link href={"/contact"}>Contact</Link>
+                <Link href={"/dashboard"}>Dashboard</Link>
             </div>
             <Profile />
         </div>
