@@ -98,7 +98,7 @@ const page = () => {
                         <small className={styles.err}>{errors.confirmPassword?.message}</small>
                     </div>
                     <div className={styles.buttonContainer}>
-                        <button>{isLoading?<Loading />:"Register"}</button>
+                        <button disabled={isLoading}>{isLoading?<Loading />:"Register"}</button>
                     </div>
                     <small>Already have an Account? <Link href={"/login"}>Login</Link></small>
                 </div>
