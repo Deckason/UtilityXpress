@@ -20,18 +20,16 @@ const useSignUp = () => {
         }
 
             try {
-                const response = await fetch("http://localhost:4000/auth/register", requestOptions)
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, requestOptions)
                 const json = await response.json()
                 if(!response.ok){
                     setErr(json.error.includes('ENOTFOUND') ?
                         "Please check your internet connection or try again later.":json.error
                     )
                     setIsLoading(false)
-                    console.log(json.error)
                 }
                 if (response.ok) {
                     setErr(null)
-                    console.log(json)
                     localStorage.setItem("user", JSON.stringify(json))
                     updateUser(json)
                     setIsLoading(false)
